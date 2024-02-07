@@ -35,6 +35,9 @@ def  getResult():
     
     result.insert(END, "The country of this number is: " + location)
     result.insert(END, "\nThe sim card of this number is: " + service_provider)
+    
+    result.insert(END, "\nLatitude is: " + str(lat))
+    result.insert(END, "\nLongitude is: " + str(lng))
 
 number = Text(height=1)
 number.pack()
