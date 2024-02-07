@@ -22,7 +22,7 @@ def  getResult():
     service_provider = carrier.name_for_number(num1, "en")
     
     result.insert(END, "The country of this number is: " + location)
-   
+    result.insert(END, "\nThe sim card of this number is: " + service_provider)
 
 number = Text(height=1)
 number.pack()
