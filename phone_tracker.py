@@ -30,6 +30,8 @@ def  getResult():
     query = str(location)
     results = ocg.geocode(query)
     
+    lat = results[0]['geometry']['lat']
+    lng = results[0]['geometry']['lng']
     
     result.insert(END, "The country of this number is: " + location)
     result.insert(END, "\nThe sim card of this number is: " + service_provider)
