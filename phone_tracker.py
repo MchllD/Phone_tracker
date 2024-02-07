@@ -27,7 +27,7 @@ def  getResult():
 number = Text(height=1)
 number.pack()
 
-button = Button(text="Search")
+button = Button(text="Search", command=getResult)
 button.pack(pady = 10, padx=100)
 
 result = Text(height=7)
