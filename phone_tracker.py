@@ -25,7 +25,11 @@ label1.pack()
 
 def  getResult():
     num = number.get("1.0", END)
-    num1 = phonenumbers.parse(num,)
+    try:
+        num1 = phonenumbers.parse(num,)
+    except:
+        messagebox.showerror("Erorr", "Number box is empty or the input is not numeric !")
+    
     
     location = geocoder.description_for_number(num1, "en")
     service_provider = carrier.name_for_number(num1, "en")
