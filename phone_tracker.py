@@ -33,6 +33,9 @@ def  getResult():
     lat = results[0]['geometry']['lat']
     lng = results[0]['geometry']['lng']
     
+    my_label = LabelFrame(root)
+    my_label.pack(pady=20)
+    
     result.insert(END, "The country of this number is: " + location)
     result.insert(END, "\nThe sim card of this number is: " + service_provider)
     
