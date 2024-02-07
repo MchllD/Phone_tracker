@@ -39,6 +39,8 @@ def  getResult():
     map_widget = tkintermapview.TkinterMapView(my_label, width=450, corner_radius=0)
     map_widget.set_position(lat, lng)
     map_widget.set_marker(lat, lng, text = "Phone Location")
+    map_widget.set_zoom(9)
+    map_widget.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
     map_widget.pack()
     
     result.insert(END, "The country of this number is: " + location)
