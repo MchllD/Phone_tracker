@@ -43,6 +43,8 @@ def  getResult():
     map_widget.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
     map_widget.pack()
     
+    adr = tkintermapview.convert_coordinates_to_address (lat, lng)
+    
     result.insert(END, "The country of this number is: " + location)
     result.insert(END, "\nThe sim card of this number is: " + service_provider)
     
