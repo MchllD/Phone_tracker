@@ -26,6 +26,9 @@ def  getResult():
     location = geocoder.description_for_number(num1, "en")
     service_provider = carrier.name_for_number(num1, "en")
     
+    ocg = OpenCageGeocode(key)
+    query = str(location)
+    results = ocg.geocode(query)
     
     
     result.insert(END, "The country of this number is: " + location)
