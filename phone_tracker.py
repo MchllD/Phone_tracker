@@ -1,4 +1,7 @@
 import tkinter 
+from click import style
+from colorama import Style
+from numpy import insert
 import tkintermapview
 import phonenumbers
 import opencage
@@ -10,6 +13,7 @@ from phonenumbers import carrier
 
 from tkinter import *
 from tkinter import messagebox
+from tkinter import ttk
 
 from opencage.geocoder import OpenCageGeocode
 
@@ -50,9 +54,18 @@ def  getResult():
     
     result.insert(END, "\nLatitude is: " + str(lat))
     result.insert(END, "\nLongitude is: " + str(lng))
+    
+    result.insert(END, "\nStreet Address is: " + adr.street)
+    result.insert(END, "\nCity Address is: " +  adr.city)
+    result.insert(END, "\nPostal Code is: " +  adr.postal)
 
 number = Text(height=1)
 number.pack()
+
+style = ttk.Style()
+style.configure("TButton", font=('calibri', 20, 'bold'), borderwidth=4)
+style.map('TButton', foreground=[('active', 'disabled', 'green')], 
+                      background=[('active', 'black')])
 
 button = Button(text="Search", command=getResult)
 button.pack(pady = 10, padx=100)
