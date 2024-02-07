@@ -37,6 +37,7 @@ def  getResult():
     my_label.pack(pady=20)
     
     map_widget = tkintermapview.TkinterMapView(my_label, width=450, corner_radius=0)
+    map_widget.pack()
     
     result.insert(END, "The country of this number is: " + location)
     result.insert(END, "\nThe sim card of this number is: " + service_provider)
